@@ -1,0 +1,20 @@
+.containers-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.containers-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.items-to-right {
+  display: flex;
+  align-items: center;
+}
+
+.edit-margin {
+  margin-right: 10px;
+  margin-bottom: 0px;
+}

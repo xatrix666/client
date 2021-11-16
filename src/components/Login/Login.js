@@ -29,43 +29,45 @@ export default function Login({ setToken }) {
       password
     });
     if (token && token.data && token.data.message) setErrorMessage(token.data.message);
-    setToken(token);
+    else setToken(token);
   }
 
   const handleSetUserName = (e) => {
     setErrorMessage();
     setUserName(e.target.value)
-  } 
+  }
 
   const handleSetPassword = (e) => {
     setErrorMessage();
     setPassword(e.target.value)
-  } 
-  
+  }
+
   const handleShowPassword = (e) => {
     setPasswordShown(!passwordShown);
   }
 
   return (
-    <div className="login-wrapper">
-      <h2>Log In</h2>
+    <div>
       {errorMessage &&
-        <h3 className="error"> {errorMessage} </h3>}
-      <form onSubmit={handleSubmit}>
-        <label className="margin-elements">
-          <input type="email" placeholder="Username" onChange={handleSetUserName} required/>
-        </label>
-        <label className="margin-elements">
-          <input type={passwordShown ? "text" : "password"} placeholder="Password" onChange={handleSetPassword} required/>
-        </label>
-        <label className="label-in-line margin-elements">
-          <p className="text-small">Show/hide Password</p>
-          <input type="checkbox" onClick={handleShowPassword} />
-        </label>
-        <div className="margin-elements">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+        <h4 className="error-user"> {errorMessage} </h4>}
+      <div className="login-wrapper">
+        <h2>Log In</h2>      
+        <form onSubmit={handleSubmit}>
+          <label className="margin-elements">
+            <input type="email" placeholder="Username" onChange={handleSetUserName} required />
+          </label>
+          <label className="margin-elements">
+            <input type={passwordShown ? "text" : "password"} placeholder="Password" onChange={handleSetPassword} required />
+          </label>
+          <label className="label-in-line margin-elements">
+            <p className="text-small">Show/hide Password</p>
+            <input type="checkbox" onClick={handleShowPassword} />
+          </label>
+          <div className="margin-elements">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

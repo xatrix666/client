@@ -23,3 +23,8 @@
     margin-bottom: 5px;
     margin-left: 10px;
 }
+
+.error-user{
+  font-size: small;
+  color: red;
+}

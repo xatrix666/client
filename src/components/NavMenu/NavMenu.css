@@ -2,7 +2,7 @@
   min-height: 4vh;
   background-color: dimgrey;
   font-family: 'Indie Flower', cursive;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -32,4 +32,16 @@
 
 .enable-link {
   pointer-events: painted;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: row;
+  color: #FFF;
+  align-items: center;
+}
+
+.edit-margin-p{
+  margin-left: 10px;
+  margin-bottom: 0;
 }
