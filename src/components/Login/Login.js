@@ -48,23 +48,21 @@ export default function Login({ setToken }) {
 
   return (
     <div className="login-wrapper">
-      <h1>Log In</h1>
+      <h2>Log In</h2>
       {errorMessage &&
         <h3 className="error"> {errorMessage} </h3>}
       <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="email" onChange={handleSetUserName} required/>
+        <label className="margin-elements">
+          <input type="email" placeholder="Username" onChange={handleSetUserName} required/>
         </label>
-        <label>
-          <p>Password</p>
-          <input type={passwordShown ? "text" : "password"} onChange={handleSetPassword} required/>
+        <label className="margin-elements">
+          <input type={passwordShown ? "text" : "password"} placeholder="Password" onChange={handleSetPassword} required/>
         </label>
-        <label>
-          <p>Show/hide Password</p>
+        <label className="label-in-line margin-elements">
+          <p className="text-small">Show/hide Password</p>
           <input type="checkbox" onClick={handleShowPassword} />
         </label>
-        <div>
+        <div className="margin-elements">
           <button type="submit">Submit</button>
         </div>
       </form>

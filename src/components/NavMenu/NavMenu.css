@@ -1,0 +1,35 @@
+.nav-style {
+  min-height: 4vh;
+  background-color: dimgrey;
+  font-family: 'Indie Flower', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-font-color {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-nav :hover {background-color: darkgray; text-decoration: none;color:#FFF; }
+.navbar-nav :visited { text-decoration: none; color:#FFF; }
+.navbar-nav :focus { text-decoration: none; color:#FFF;}
+.navbar-nav :active { text-decoration: none; color:#FFF;}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.enable-link {
+  pointer-events: painted;
+}

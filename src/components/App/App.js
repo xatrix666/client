@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Asteroids from '../Asteroids/Asteroids';
 import Login from '../Login/Login';
+import NavMenu from '../NavMenu/NavMenu';
 import useToken from './useToken';
 
 function App() {
@@ -13,13 +14,12 @@ function App() {
   return (
     <div>
       <Header />
+      <NavMenu />
       <div className="wrapper">
-        <BrowserRouter>
-          <Routes>
-            {!token && <Route path="/" element={<Login setToken={setToken} />} />}
-            <Route path="asteroids" element={<Asteroids />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          {!token && <Route exact path="/" element={<Login setToken={setToken} />} />}
+          {token && <Route path="/asteroids" element={<Asteroids />} />}
+        </Routes>
       </div>
     </div>
   );
