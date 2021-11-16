@@ -42,7 +42,7 @@ export default function Login({ setToken }) {
     setPassword(e.target.value)
   }
 
-  const handleShowPassword = (e) => {
+  const handleShowPassword = () => {
     setPasswordShown(!passwordShown);
   }
 

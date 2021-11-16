@@ -18,3 +18,42 @@
   margin-right: 10px;
   margin-bottom: 0px;
 }
+
+.margin-element-filters {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.filter-wrapper {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin-bottom: 25px;
+}
+
+.asteroids-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-size {
+  width: 140px;
+}
