@@ -12,14 +12,12 @@ function App() {
   const { token, setToken } = UseToken();
 
   return (
-    <div>
+    <div className="total">
       <Header />
       <NavMenu />
       <div className="wrapper">
-        <Routes>
-          {!token && <Route exact path="/" element={<Login setToken={setToken} />} />}
-          {token && <Route exact path="/asteroids" element={<Asteroids />} />}
-        </Routes>
+        {!token && <Login setToken={setToken} />}
+        {token && <Asteroids />}
       </div>
     </div>
   );
